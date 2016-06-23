@@ -49,3 +49,45 @@ Scenario: Automatically generating the synthetic ID for GET or DELETE request
     Given The synthetic id "12345|EV1|98415|51681"
     When I make a GET request to "http://jsonplaceholder.typicode.com/posts/{syntheticId}"
     Then The response status code should be "404" 
+
+Scenario: Making a request with a timestamp of todays date
+    Given The json request data
+    """json
+    {
+        "title": "foo",
+        "body": "bar",
+        "userId": 1,
+        "ts": ""
+    }
+    """
+    And The property "ts" is todays date
+    When I make a POST request to "http://jsonplaceholder.typicode.com/posts"
+    Then the response status code should be "201"
+
+Scenario: Making a request with a timestamp in the future
+    Given The json request data
+    """json
+    {
+        "title": "foo",
+        "body": "bar",
+        "userId": 1,
+        "ts": ""
+    }
+    """
+    And The property "ts" is a date "3" days in the future
+    When I make a POST request to "http://jsonplaceholder.typicode.com/posts"
+    Then the response status code should be "201"
+
+Scenario: Making a request with a timestamp in the past
+    Given The json request data
+    """json
+    {
+        "title": "foo",
+        "body": "bar",
+        "userId": 1,
+        "ts": ""
+    }
+    """
+    And The property "ts" is a date "3" days in the past
+    When I make a POST request to "http://jsonplaceholder.typicode.com/posts"
+    Then the response status code should be "201"
