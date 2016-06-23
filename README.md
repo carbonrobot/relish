@@ -36,7 +36,6 @@ To run a single feature file, run the following command from the project directo
 $ npm test features/examples/examples.feature
 ```
 
-
 To run a single test in a feature file, run the following command from the project directory. 
 In this example "23" is the line number of the test in the file.
 
@@ -44,9 +43,21 @@ In this example "23" is the line number of the test in the file.
 $ npm test features/examples/examples.feature:23
 ```
 
+Running the examples
+
+```bash
+$ npm test examples
+```
+
+Running with extra debugging information
+
+```bash
+$ npm run test-debug
+```
+
 ## Writing Tests
 
 Place new feature files in the `features` folder. Features can and should be organized into folders.
 
-Refer to the `features/examples.feature` file for examples of what is possible with this framework.
+Refer to the examples for more information on what is available.
 
