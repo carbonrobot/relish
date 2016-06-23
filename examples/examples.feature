@@ -2,8 +2,9 @@ Feature: REST API Examples
     The following examples show the features of this testing application
     and available options for data
 
+@baseUrl @baseUrl-examples
 Scenario: Making a simple GET request
-    When I make a GET request to "http://jsonplaceholder.typicode.com/posts/1"
+    When I make a GET request to "posts/1"
     Then The response property "userId" should have value "1"
     And The response property "id" should have value "1"
 
