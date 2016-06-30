@@ -1,28 +1,23 @@
 {
-  "name": "relish",
+  "name": "faro-test",
   "version": "1.0.0",
   "description": "ATDD for REST API development based on Cucumber",
   "main": "index.js",
   "scripts": {
     "test": "cucumberjs --require lib",
-    "test-debug": "DEBUG=true cucumberjs --require lib"
+    "test-debug": "cross-env DEBUG=true cucumberjs --require lib"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carbonrobot/relish.git"
+    "url": "git+https://codehub.optum.com/optum-financial-portals/faro-test.git"
   },
-  "author": "Charles Brown <carbonrobot@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/carbonrobot/relish/issues"
-  },
-  "homepage": "https://github.com/carbonrobot/relish#readme",
   "dependencies": {
     "assert": "^1.4.1",
     "cross-env": "^1.0.8",
     "cucumber": "^1.0.0",
     "lodash": "^4.13.1",
     "moment": "^2.13.0",
+    "random-words": "0.0.1",
     "request-promise": "^3.0.0"
   }
 }

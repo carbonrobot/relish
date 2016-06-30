@@ -5,8 +5,8 @@ Feature: REST API Examples
 
 Scenario: Making a simple GET request
     When I make a GET request to "/posts/1"
-    Then The response property "userId" should have value "1"
-    And The response property "id" should have value "1"
+    Then The response property "userId" should be "1"
+    And The response property "id" should be "1"
 
 Scenario: Making a POST request with json data
     Given The json request data
@@ -18,16 +18,16 @@ Scenario: Making a POST request with json data
     }
     """
     When I make a POST request to "/posts"
-    Then The response property "userId" should have value "1"
-    And The response property "id" should have value "101"
+    Then The response property "userId" should be "1"
+    And The response property "id" should be "101"
 
 Scenario: Making a POST request using tabular data (same as above, but alternate format)
     Given The request data
     | title | body | userId |
     | foo   | bar  | 1      |
     When I make a POST request to "/posts"
-    Then The response property "userId" should have value "1"
-    And The response property "id" should have value "101"
+    Then The response property "userId" should be "1"
+    And The response property "id" should be "101"
 
 Scenario: Making a simple DELETE request
     When I make a DELETE request to "/posts/1"
