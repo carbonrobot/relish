@@ -1,5 +1,5 @@
 {
-  "name": "faro-test",
+  "name": "relish",
   "version": "1.0.0",
   "description": "ATDD for REST API development based on Cucumber",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://codehub.optum.com/optum-financial-portals/faro-test.git"
+    "url": "git+https://github.com/carbonrobot/relish.git"
   },
   "dependencies": {
     "assert": "^1.4.1",
